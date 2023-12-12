@@ -1,21 +1,10 @@
 #!/usr/bin/node
-
-const Base = require('./5-square');
-
-modulel.exports = class Square extends Base {
-    charPrint (c) {
-        let str = '';
-        let w = this.width;
-        let h = this.height;
-        let ch;
-        c ? ch = c : ch = 'X';
-        while (w > 0) {
-            str += ch;
-            w--;
-        }
-        while (h > 0) {
-            console.log(str);
-            h--;
-        }
+module.exports = class Square extends require('./5-square.js') {
+  charPrint (c) {
+    if (c === undefined) {
+      this.print();
+    } else {
+      for (let i = 0; i < this.height; i++) console.log(c.repeat(this.width));
     }
+  }
 };
