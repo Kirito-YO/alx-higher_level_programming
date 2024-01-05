@@ -2,8 +2,6 @@
 """
 Module contains find_peak()
 """
-
-
 def recurse_peak(array, mid):
     """
     Recurses list to find peak
@@ -17,7 +15,6 @@ def recurse_peak(array, mid):
             return recurse_peak(array, mid - 1)
     except Exception:
         pass
-
 
 def find_peak(list_of_integers):
     """
